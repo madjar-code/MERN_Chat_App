@@ -36,13 +36,7 @@ export const signup = async (req, res) => {
       gender,
       profilePic: gender === 'male' ? boyProfilePic : girlProfilePic
     })
-    // await newUser.save()
-    // res.status(201).json({
-    //   _id: newUser._id,
-    //   fullName: newUser.fullName,
-    //   user: newUser.username,
-    //   profilePic: newUser.profilePic
-    // })
+
     if (newUser) {
       // Generate JWT token here
       generateTokenAndSetCookie(newUser._id, res)
