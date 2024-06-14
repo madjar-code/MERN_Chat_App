@@ -23,7 +23,7 @@ app.use('/api/users', userRoutes)
 //   res.send('Hello World!!')
 // })
 
-app.listen(PORT, () => {
-  connectToMongoDB();
+server.listen(PORT, () => {
+  connectToMongoDB()
   console.log(`Server running on port ${PORT}`)
 })
